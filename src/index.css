@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 90s Style Background Pattern */
+body {
+  background: #000000 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==") repeat;
+  color: #00ff00;
+  font-family: "VT323", monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Retro Elements */
+.retro-border {
+  border: 2px solid #00ff00;
+  box-shadow: 4px 4px 0 #008800;
+}
+
+.retro-button {
+  background: #000;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 5px 15px;
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.retro-button:hover {
+  background: #00ff00;
+  color: #000;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee span {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+/* Retro Card */
+.retro-card {
+  background: #000;
+  border: 2px solid #00ff00;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 4px 4px 0 #008800;
+}
+
+/* Retro Input */
+.retro-input {
+  background: #000;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 5px;
+  font-family: "VT323", monospace;
+}
+
+.retro-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #00ff00;
+}
+
+/* Under Construction */
+.under-construction {
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,
+    #000000 10px,
+    #ffff00 10px,
+    #ffff00 20px
+  );
+}
+
+/* Blinking Text */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Hit Counter */
+.hit-counter {
+  background: #000;
+  border: 2px solid #00ff00;
+  padding: 5px 10px;
+  font-family: "VT323", monospace;
+  color: #00ff00;
+  display: inline-block;
+}
